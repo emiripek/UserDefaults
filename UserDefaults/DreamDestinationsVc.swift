@@ -35,6 +35,9 @@ class DreamDestinationsVc: UIViewController {
         textField.placeholder = "Enter visit count"
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.borderStyle = .line
+        textField.textColor = .blue
+        textField.keyboardType = .numberPad
         return textField
     }()
 
@@ -49,6 +52,8 @@ class DreamDestinationsVc: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Enter destination name"
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.borderStyle = .line
+        textField.textColor = .blue
         return textField
     }()
 
