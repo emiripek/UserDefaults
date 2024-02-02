@@ -75,7 +75,7 @@ class DreamDestinationsVc: UIViewController {
     func setupUI() {
         view.backgroundColor = .white
 
-        // Add UI Elements to the view
+        // UI Elements to the view
         view.addSubview(haveVisitedLabel)
         view.addSubview(haveVisitedSwitch)
         view.addSubview(visitCountLabel)
@@ -84,7 +84,7 @@ class DreamDestinationsVc: UIViewController {
         view.addSubview(destinationNameTextField)
         view.addSubview(saveButton)
 
-        // Set up constraints
+        // Constraints
         NSLayoutConstraint.activate([
             haveVisitedLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             haveVisitedLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -111,7 +111,7 @@ class DreamDestinationsVc: UIViewController {
             saveButton.widthAnchor.constraint(equalToConstant: 100)
         ])
 
-        // Add action for the Save button
+        // Action for the Save button
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
 
