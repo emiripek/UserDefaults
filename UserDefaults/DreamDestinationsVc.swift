@@ -34,10 +34,8 @@ class DreamDestinationsVc: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Enter visit count"
         textField.keyboardType = .numberPad
-        textField.translatesAutoresizingMaskIntoConstraints = false
         textField.borderStyle = .line
-        textField.textColor = .blue
-        textField.keyboardType = .numberPad
+        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
 
@@ -51,9 +49,8 @@ class DreamDestinationsVc: UIViewController {
     let destinationNameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter destination name"
-        textField.translatesAutoresizingMaskIntoConstraints = false
         textField.borderStyle = .line
-        textField.textColor = .blue
+        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
 
@@ -73,9 +70,9 @@ class DreamDestinationsVc: UIViewController {
     }
 
     func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
-        // UI Elements to the view
+        // Add UI Elements to the view
         view.addSubview(haveVisitedLabel)
         view.addSubview(haveVisitedSwitch)
         view.addSubview(visitCountLabel)
@@ -84,7 +81,7 @@ class DreamDestinationsVc: UIViewController {
         view.addSubview(destinationNameTextField)
         view.addSubview(saveButton)
 
-        // Constraints
+        // Set up constraints
         NSLayoutConstraint.activate([
             haveVisitedLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             haveVisitedLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -111,7 +108,7 @@ class DreamDestinationsVc: UIViewController {
             saveButton.widthAnchor.constraint(equalToConstant: 100)
         ])
 
-        // Action for the Save button
+        // Add action for the Save button
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
 
